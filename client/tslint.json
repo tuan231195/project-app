@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "tslint:recommended"
+  ],
+  "jsRules": {},
+  "rules": {
+    "no-console": false,
+    "quotemark": [true, "single", "avoid-escape"],
+    "eofline": false,
+    "no-var-requires": false
+  },
+  "rulesDirectory": [
+    "./node_modules/tslint-jasmine-rules/dist"
+  ]
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="scripts">
+	<!--/*@thymesVar id="appDevPath" type="java.lang.String"*/-->
+	<script type="text/javascript" th:src="@{${appDevPath + '/manifest.js'}}"></script>
+	<script type="text/javascript" th:src="@{${appDevPath + '/polyfill.js'}}"></script>
+	<script type="text/javascript" th:src="@{${appDevPath + '/vendor.js'}}"></script>
+	<script type="text/javascript" th:src="@{${appDevPath + '/app.js'}}"></script>
+	<!--/*@thymesVar id="scripts" type="java.util.ArrayList<String>"*/-->
+	<th:block th:if="${scripts != null and scripts.size() > 0}">
+		<script type="text/javascript" th:each="script: ${scripts}" th:if="${#strings.startsWith(script, '~')}"
+				th:src="@{${appDevPath + '/' + #strings.substring(script, 1)}}"></script>
+		<script type="text/javascript" th:each="script: ${scripts}" th:if="${not #strings.startsWith(script, '~')}"
+				th:src="@{${script}}"></script>
+	</th:block>
+	<script type="text/javascript" th:inline="javascript">
+		/*<![CDATA[*/
+		let angularValues = [[${angularValues}]] || {};
+		let angularModuleValues = [[${angularModuleValues}]] || {};
+		let angularApp = [[${angularApp}]] || '';
+
+		let app = angular.module(angularApp);
+		Object.keys(angularValues).forEach(function (key) {
+			app.value(key, angularValues[key]);
+		});
+
+		Object.keys(angularModuleValues).forEach(function (key) {
+			app = angular.module(key);
+			let values = angularModuleValues[key];
+			Object.keys(values).forEach(function (key) {
+				app.value(key, values[key]);
+			});
+		});
+
+		angular.element(document).ready(function(){
+			angular.bootstrap(document, ['tn.app', angularApp]);
+		});
+
+		/*]]>*/
+	</script>
+</th:block>
+<footer th:fragment="footer">
+	<div>This is a footer</div>
+</footer>
+</html>

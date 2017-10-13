@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head th:replace="include/header :: header"></head>
+<body>
+<div class="container" id="appContainer" ng-controller="MainController">
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6" layout:fragment="content">
+			Page content goes here
+		</div>
+		<div class="col-md-3"></div>
+	</div>
+</div>
+<th:block th:replace="include/footer :: scripts">
+	Scripts block
+</th:block>
+<footer th:replace="include/footer :: footer"></footer>
+</body>
+</html>
