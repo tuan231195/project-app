@@ -1,6 +1,6 @@
-package com.tuannguyen.comicapp;
+package com.tuannguyen.projectapp;
 
-import com.tuannguyen.comicapp.util.ViewModel;
+import com.tuannguyen.projectapp.util.ViewModel;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
@@ -8,8 +8,6 @@ import org.springframework.context.annotation.PropertySources;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.NoHandlerFoundException;
 
 import javax.servlet.http.HttpServletRequest;

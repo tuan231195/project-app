@@ -1,16 +1,12 @@
-package com.tuannguyen.comicapp.user;
+package com.tuannguyen.projectapp.user;
 
 import com.google.common.collect.ImmutableMap;
-import com.tuannguyen.comicapp.util.ViewModel;
+import com.tuannguyen.projectapp.util.ViewModel;
 import org.springframework.stereotype.Controller;
 
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.Map;
 
 @Controller
