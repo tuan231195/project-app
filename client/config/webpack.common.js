@@ -6,12 +6,7 @@ const helpers = require('./helpers');
 
 const commonConfig = merge([
 	parts.baseConfig(),
-	parts.loadCSS({
-		use: 'raw-loader'
-	}),
-	parts.lintCSS({include: config.src}),
 	parts.lintTypeScript(),
-	parts.lintJavaScript({include: config.src}),
 	parts.loadJavaScript({
 		exclude: /node_modules/
 	}),
@@ -22,7 +17,7 @@ const commonConfig = merge([
 		}
 	}),
 	parts.loadFonts({
-		loader: 'file-loader',
+		loader: 'url-loader',
 	}),
 	parts.loadTypeScript(),
 	parts.loadHTML(),

@@ -1,3 +1,37 @@
-body{
-	color: red;
+#app-container {
+	height: 100%;
 }
+.height-100 {
+	height: 100%;
+}
+
+.marg-3-top {margin-top:3px;}
+.marg-3-bottom {margin-bottom:3px}
+.marg-5-left {margin-left:5px;}
+.marg-5-right {margin-right:5px;}
+.marg-5-top {margin-top:5px;}
+.marg-10-top {margin-top:10px}
+.marg-10-bottom {margin-bottom:10px}
+.marg-10-left {margin-left:10px}
+.marg-10-right {margin-right:10px}
+.marg-15-top {margin-top:15px}
+.marg-15-bottom {margin-bottom:15px}
+.marg-15-left{margin-left:15px}
+.marg-15-right{margin-right:15px}
+.marg-20-top {margin-top:20px}
+.marg-20-bottom {margin-bottom:20px}
+.marg-20-right {margin-right:20px}
+.marg-20-left {margin-left:20px}
+.marg-40-top {margin-top:40px}
+.marg-40-bottom {margin-bottom:40px}
+.pad-20-horz {padding:0 20px;}
+.pad-10 {padding:10px;}
+.pad-10-top{padding-top :10px;}
+.pad-10-bottom{padding-bottom :10px;}
+.pad-10-left{padding-left :10px;}
+.pad-10-right{padding-right :10px;}
+.pad-20-top{padding-top :20px;}
+.pad-20-bottom{padding-bottom :20px;}
+.pad-20-left{padding-left :20px;}
+.pad-20-right{padding-right :20px;}
+.fixed {table-layout:fixed;}

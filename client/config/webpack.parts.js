@@ -302,7 +302,6 @@ exports.ignoreErrors = () => ({
 exports.loadJQuery = () => ({
 	plugins: [
 		new webpack.ProvidePlugin({
-			'window.jQuery': 'jquery',
 			'$': 'jquery',
 			'jQuery': 'jquery'
 		})

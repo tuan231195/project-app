@@ -4,14 +4,8 @@
 	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head th:replace="include/header :: header"></head>
 <body>
-<div class="container" id="appContainer" ng-controller="MainController">
-	<div class="row">
-		<div class="col-md-3"></div>
-		<div class="col-md-6" layout:fragment="content">
-			Page content goes here
-		</div>
-		<div class="col-md-3"></div>
-	</div>
+<div id="app-container" ng-controller="MainController" layout:fragment="content">
+	Page content goes here
 </div>
 <th:block th:replace="include/footer :: scripts">
 	Scripts block

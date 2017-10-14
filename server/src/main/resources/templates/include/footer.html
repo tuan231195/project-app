@@ -18,11 +18,12 @@
 		let angularValues = [[${angularValues}]] || {};
 		let angularModuleValues = [[${angularModuleValues}]] || {};
 		let angularApp = [[${angularApp}]] || '';
-
-		let app = angular.module(angularApp);
-		Object.keys(angularValues).forEach(function (key) {
-			app.value(key, angularValues[key]);
-		});
+		if (angularApp) {
+			let app = angular.module(angularApp);
+			Object.keys(angularValues).forEach(function (key) {
+				app.value(key, angularValues[key]);
+			});
+		}
 
 		Object.keys(angularModuleValues).forEach(function (key) {
 			app = angular.module(key);
@@ -33,13 +34,16 @@
 		});
 
 		angular.element(document).ready(function(){
-			angular.bootstrap(document, ['tn.app', angularApp]);
+			let bootstrapElements = ['tn.app'];
+			if (angularApp){
+				bootstrapElements.push(angularApp);
+			}
+			angular.bootstrap(document, bootstrapElements);
 		});
 
 		/*]]>*/
 	</script>
 </th:block>
 <footer th:fragment="footer">
-	<div>This is a footer</div>
 </footer>
 </html>
