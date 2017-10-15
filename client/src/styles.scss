@@ -5,6 +5,46 @@
 	height: 100%;
 }
 
+[ng\:cloak], [ng-cloak], .ng-cloak {
+	display: none !important;
+}
+
+#site-header{
+	font-family: Vollkorn, serif;
+	font-size: 36px;
+}
+
+.site-logo{
+	display: inline-block;
+	vertical-align: middle;
+	margin: -.3em 0;
+	width: 2.5em;
+}
+
+.ui.menu.site-menu {
+	margin: 0;
+	border-radius: 0;
+}
+.forgot_password {
+	display: inline-block;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+a.underline :hover {
+	text-decoration: underline;
+}
+
+.ui.form.form--auto{
+	width: auto;
+}
+
+.ui.header.header--textWhite{
+	color: white;
+}
+
 .marg-3-top {margin-top:3px;}
 .marg-3-bottom {margin-bottom:3px}
 .marg-5-left {margin-left:5px;}

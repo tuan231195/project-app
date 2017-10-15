@@ -1,0 +1,9 @@
+.ui.floating.label.label--error {
+	left: calc(100% + 25px);
+	white-space: nowrap;
+	top: 0.5em
+}
+
+.ui.field.field--hasErrors{
+	position: relative;
+}

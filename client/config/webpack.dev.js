@@ -26,7 +26,7 @@ const devConfig = merge([
 	}),
 	parts.devServer({
 		host: process.env.HOST, // Defaults to `localhost`
-		port: process.env.PORT // Defaults to 8080
+		port: 8082 // Defaults to 8082
 	})
 ]);
 

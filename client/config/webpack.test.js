@@ -9,9 +9,12 @@ module.exports = merge([
 		devtool: 'inline-source-map',
 		resolve: {
 			extensions: ['.ts', '.tsx', '.js', '.scss'],
-		},
+		}
 	},
 	parts.loadTypeScript(),
+	parts.loadJavaScript({
+		exclude: /node_modules/
+	}),
 	parts.loadHTML(),
 	parts.loadImages({
 		loader: 'null-loader'
@@ -26,6 +29,6 @@ module.exports = merge([
 	}),
 	parts.loadSass({
 		use: 'null-loader'
-	}),
+	})
 ]);
 

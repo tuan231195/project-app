@@ -34,11 +34,8 @@ exports.devServer = ({host, port} = {}) => ({
 			errors: true,
 			warnings: true
 		},
-		proxy: {
-			'/api/': {
-				target: 'http://localhost:8080'
-			}
-		}
+		host,
+		port
 	}
 });
 
@@ -83,7 +80,7 @@ exports.lintJavaScript = ({include, exclude, options}) => ({
 });
 
 
-exports.loadJavaScript = ({include, exclude}) => ({
+exports.loadJavaScript = ({include, exclude} = {}) => ({
 	module: {
 		rules: [
 			{

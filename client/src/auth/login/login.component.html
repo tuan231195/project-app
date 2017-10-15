@@ -1,0 +1,38 @@
+<div class="height-100 ui blue inverted vertical masthead segment">
+	<div class="ui height-100 centered aligned middle aligned grid container">
+		<div class="nine wide column">
+			<h1 id="site-header" class="ui header center aligned header--textWhite marg-40-bottom">My Project</h1>
+			<div class="ui attached message">
+				<div class="header">
+					Welcome to our site!
+				</div>
+				<p>Fill out the form below to login to your account</p>
+			</div>
+			<form class="ui attached fluid form form--auto segment">
+				<div class="ui field field--hasErrors">
+					<div class="ui fluid left icon input">
+						<i class="user icon"></i>
+						<input id="username" ng-model="LoginController.user.username" placeholder="User"/>
+					</div>
+					<div class="ui floating left pointing red label label--error" ng-if="LoginController.errors.username">
+						{{LoginController.errors.username}}
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui fluid left icon input">
+						<i class="lock icon"></i>
+						<input type="text" placeholder="Password"/>
+					</div>
+				</div>
+				<button class="ui green submit button" type="submit">
+					Login
+				</button>
+				<a class="forgot_password pointer underline marg-10-left"><i>Forgot password?</i></a>
+			</form>
+			<div class="ui bottom attached warning message">
+				<i class="icon help"></i>
+				New to us? <a href="/signup">Signup here</a>.
+			</div>
+		</div>
+	</div>
+</div>

@@ -3,8 +3,11 @@
 	  xmlns:th="http://www.thymeleaf.org"
 	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head th:replace="include/header :: header"></head>
-<body>
-<div id="app-container" ng-controller="MainController" layout:fragment="content">
+<body ng-controller="MainController">
+<div id="nav-bar" th:replace="include/navbar :: navbar">
+	This is the navbar
+</div>
+<div id="app-container" layout:fragment="content">
 	Page content goes here
 </div>
 <th:block th:replace="include/footer :: scripts">

@@ -66,6 +66,7 @@
     "lodash": "^4.17.4",
     "moment": "^2.19.1",
     "purify-css": "^1.2.5",
+    "rxjs": "^5.4.3",
     "tslint-loader": "^3.5.3"
   }
 }

@@ -1,0 +1,58 @@
+<div class="height-100 ui blue inverted vertical masthead segment">
+	<div class="ui height-100 centered aligned middle aligned grid container">
+		<div class="nine wide column">
+			<h1 id="site-header" class="ui header center aligned header--textWhite marg-40-bottom">My Project</h1>
+			<div class="ui attached message">
+				<div class="header">
+					Welcome to our site!
+				</div>
+				<p>Fill out the form below to sign up</p>
+			</div>
+			<form class="ui attached fluid form form--auto segment">
+				<div class="ui field field--hasErrors">
+					<div class="ui fluid left icon input">
+						<i class="user icon"></i>
+						<input placeholder="User" id="username" ng-model="SignupController.user.username" ng-change="SignupController.onInputChange('username')"/>
+					</div>
+					<div class="ui floating left pointing red label label--error" ng-if="SignupController.formFields.get('username').error">
+						{{SignupController.formFields.get('username').error}}
+					</div>
+				</div>
+				<div class="ui field field--hasErrors">
+					<div class="ui fluid left icon input">
+						<i class="mail icon"></i>
+						<input type="email" ng-model-options="{'allowInvalid': true}" placeholder="Email" id="email" ng-model="SignupController.user.email" ng-change="SignupController.onInputChange('email')"/>
+					</div>
+					<div class="ui floating left pointing red label label--error" ng-if="SignupController.formFields.get('email').error">
+						{{SignupController.formFields.get('email').error}}
+					</div>
+				</div>
+				<div class="ui field field--hasErrors">
+					<div class="ui fluid left icon input">
+						<i class="lock icon"></i>
+						<input type="password" placeholder="Password" id="password" ng-model="SignupController.user.password" ng-change="SignupController.onInputChange('password')"/>
+					</div>
+					<div class="ui floating left pointing red label label--error" ng-if="SignupController.formFields.get('password').error">
+						{{SignupController.formFields.get('password').error}}
+					</div>
+				</div>
+				<div class="ui field field--hasErrors">
+					<div class="ui fluid left icon input">
+						<i class="lock icon"></i>
+						<input type="password" placeholder="Confirm password" id="confirmPassword" ng-model="SignupController.user.confirmPassword" ng-change="SignupController.onInputChange('confirmPassword')"/>
+					</div>
+					<div class="ui floating left pointing red label label--error" ng-if="SignupController.formFields.get('confirmPassword').error">
+						{{SignupController.formFields.get('confirmPassword').error}}
+					</div>
+				</div>
+				<button class="ui green submit button" ng-disabled="SignupController.isNotValid()">
+					Sign up
+				</button>
+			</form>
+			<div class="ui bottom attached warning message">
+				<i class="icon help"></i>
+				Already registered? <a href="/login">Login here</a>.
+			</div>
+		</div>
+	</div>
+</div>
