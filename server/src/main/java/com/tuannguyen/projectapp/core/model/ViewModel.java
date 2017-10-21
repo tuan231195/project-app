@@ -1,4 +1,4 @@
-package com.tuannguyen.projectapp.util;
+package com.tuannguyen.projectapp.core.model;
 
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.View;

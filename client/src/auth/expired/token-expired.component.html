@@ -1,0 +1,13 @@
+<div class="height-100 ui blue inverted vertical masthead segment">
+	<div class="ui height-100 centered aligned middle aligned grid container">
+		<div class="nine wide column">
+			<div class="ui center aligned segment">
+				<div class="header">Your token has expired</div>
+				Click <a class="pointer" ng-click="TokenExpiredCtrl.resendEmail()">Here</a> to resend email</a>
+			</div>
+		</div>
+	</div>
+	<div class="ui active dimmer" ng-if="SuccessRegistrationCtrl.isLoading">
+		<div class="ui text loader">Resending email...</div>
+	</div>
+</div>

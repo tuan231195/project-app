@@ -1,5 +1,7 @@
 export class UserForm {
     public username: string;
+    public firstName: string;
+    public lastName: string;
     public email: string;
     public password: string = '';
     public confirmPassword: string = '';
@@ -10,5 +12,6 @@ export class UserForm {
     public country: string;
     public postcode: number;
     public dob: string;
+    public title: string = 'Mr.';
     public phone: string;
 }

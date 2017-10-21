@@ -1,7 +1,7 @@
 package com.tuannguyen.projectapp.user;
 
 import com.google.common.collect.ImmutableMap;
-import com.tuannguyen.projectapp.util.ViewModel;
+import com.tuannguyen.projectapp.core.model.ViewModel;
 import org.springframework.stereotype.Controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;

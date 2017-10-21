@@ -1,0 +1,18 @@
+<div class="height-100 ui blue inverted vertical masthead segment">
+	<div class="ui height-100 centered aligned middle aligned grid container">
+		<div class="nine wide column">
+			<div class="ui center aligned segment">
+				<img src="https://cdn4.iconfinder.com/data/icons/social-communication/142/open_mail_letter-512.png"
+					 style="width:30px; height: 30px;">
+				<p class="desc">Thank you for signing up!<br>We've sent a confirmation link to your email:
+					{{SuccessRegistrationCtrl.email}}.<br>Please
+					visit your <i class="inbox icon"></i>
+				</p>
+				<a class="pointer" ng-click="SuccessRegistrationCtrl.resendEmail()">Resend email</a>
+			</div>
+		</div>
+	</div>
+	<div class="ui active dimmer" ng-if="SuccessRegistrationCtrl.isLoading">
+		<div class="ui text loader">Resending email...</div>
+	</div>
+</div>

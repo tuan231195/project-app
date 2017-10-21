@@ -1,4 +1,6 @@
 import 'angular';
+import 'angular-animate';
+import 'angular-toastr';
 import 'jquery';
 import 'lodash/isNumber';
 import 'lodash/isInteger';

@@ -8,25 +8,35 @@
 				</div>
 				<p>Fill out the form below to login to your account</p>
 			</div>
-			<form class="ui attached fluid form form--auto segment">
+			<form class="ui attached fluid form form--auto segment" ng-class="{'error': LoginController.error}" action="/login" method="post">
 				<div class="ui field field--hasErrors">
 					<div class="ui fluid left icon input">
 						<i class="user icon"></i>
-						<input id="username" ng-model="LoginController.user.username" placeholder="User"/>
+						<input id="username" name="username" ng-model="LoginController.user.username" placeholder="User"
+							   ng-change="LoginController.onInputChange('username')"/>
 					</div>
-					<div class="ui floating left pointing red label label--error" ng-if="LoginController.errors.username">
-						{{LoginController.errors.username}}
+					<div class="ui floating left pointing red label label--error"
+						 ng-if="LoginController.formFields.get('username').error">
+						{{LoginController.formFields.get('username').error}}
 					</div>
 				</div>
-				<div class="field">
+				<div class="ui field field--hasErrors">
 					<div class="ui fluid left icon input">
 						<i class="lock icon"></i>
-						<input type="text" placeholder="Password"/>
+						<input type="password" name="password" ng-model="LoginController.user.password"
+							   placeholder="Password" ng-change="LoginController.onInputChange('password')"/>
+					</div>
+					<div class="ui floating left pointing red label label--error"
+						 ng-if="LoginController.formFields.get('password').error">
+						{{LoginController.formFields.get('password').error}}
 					</div>
 				</div>
-				<button class="ui green submit button" type="submit">
-					Login
-				</button>
+				<div class="ui error message">
+					{{LoginController.error}}
+				</div>
+				<input class="ui green submit button" type="submit" value="Login"
+					   ng-disabled="LoginController.isNotValid()"/>
+				<ng-transclude></ng-transclude>
 				<a class="forgot_password pointer underline marg-10-left"><i>Forgot password?</i></a>
 			</form>
 			<div class="ui bottom attached warning message">

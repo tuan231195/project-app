@@ -5,7 +5,14 @@
 	  layout:decorator="layout">
 <body>
 <div layout:fragment="content">
-	<tn-login></tn-login>
+	<!--/*@thymesVar id="verifySuccess" type="java.lang.Boolean"*/-->
+	<tn-login
+		th:attr="verify-success=${verifySuccess},error=${(param.error != null and session[SPRING_SECURITY_LAST_EXCEPTION] != null) ? session[SPRING_SECURITY_LAST_EXCEPTION].message: ''}">
+		<input
+			type="hidden"
+			th:name="${_csrf.parameterName}"
+			th:value="${_csrf.token}"/>
+	</tn-login>
 </div>
 </body>
 </html>
